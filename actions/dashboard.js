@@ -6,7 +6,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
+  model: "gemini-2.5-flash",
 });
 
 export const generateAIInsights = async (industry) => {
@@ -24,7 +24,7 @@ export const generateAIInsights = async (industry) => {
             "recommendedSkills": ["skill1", "skill2"]
           }
           
-          IMPORTANT: Return ONLY the JSON. No additional text, notes, or markdown formatting.
+          IMPORTANT: Return ONnLY the JSON. No additional text, notes, or markdown formatting.
           Include at least 5 common roles for salary ranges.
           Growth rate should be a percentage.
           Include at least 5 skills and trends.
